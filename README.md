@@ -1,5 +1,5 @@
 # KWK User Inyerface
 
 ## Usage
-[Download Xcode](https://developer.apple.com/xcode/)
-Hit `Clone -> Open in XCode` to try it out!
+1)[Download Xcode](https://developer.apple.com/xcode/)
+2) Press `Clone -> Open in XCode` to try it out!
