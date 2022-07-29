@@ -14,6 +14,13 @@
 		BDCF73542892FA2D00BFA1D8 /* UserInyerface.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDCF73522892FA2D00BFA1D8 /* UserInyerface.xcdatamodeld */; };
 		BDCF73562892FA2F00BFA1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDCF73552892FA2F00BFA1D8 /* Assets.xcassets */; };
 		BDCF73592892FA2F00BFA1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCF73572892FA2F00BFA1D8 /* LaunchScreen.storyboard */; };
+		BDCF7361289311D200BFA1D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF7360289311D200BFA1D8 /* Extensions.swift */; };
+		BDCF73632893135B00BFA1D8 /* YouWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF73622893135A00BFA1D8 /* YouWinViewController.swift */; };
+		BDCF73652893158500BFA1D8 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF73642893158500BFA1D8 /* GlobalVariables.swift */; };
+		BDCF736728931C4000BFA1D8 /* carlton-dancing.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDCF736628931C4000BFA1D8 /* carlton-dancing.gif */; };
+		BDCF736928932B8800BFA1D8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736828932B8800BFA1D8 /* SignUpViewController.swift */; };
+		BDCF736B28934AC300BFA1D8 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736A28934AC300BFA1D8 /* TermsAndConditionsViewController.swift */; };
+		BDCF736D28935C8400BFA1D8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736C28935C8400BFA1D8 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		BDCF73552892FA2F00BFA1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDCF73582892FA2F00BFA1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDCF735A2892FA2F00BFA1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDCF7360289311D200BFA1D8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BDCF73622893135A00BFA1D8 /* YouWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouWinViewController.swift; sourceTree = "<group>"; };
+		BDCF73642893158500BFA1D8 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		BDCF736628931C4000BFA1D8 /* carlton-dancing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "carlton-dancing.gif"; sourceTree = "<group>"; };
+		BDCF736828932B8800BFA1D8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BDCF736A28934AC300BFA1D8 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		BDCF736C28935C8400BFA1D8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +75,15 @@
 				BDCF73492892FA2C00BFA1D8 /* AppDelegate.swift */,
 				BDCF734B2892FA2C00BFA1D8 /* SceneDelegate.swift */,
 				BDCF734D2892FA2C00BFA1D8 /* ViewController.swift */,
+				BDCF73622893135A00BFA1D8 /* YouWinViewController.swift */,
+				BDCF736C28935C8400BFA1D8 /* AlertViewController.swift */,
+				BDCF736828932B8800BFA1D8 /* SignUpViewController.swift */,
+				BDCF736A28934AC300BFA1D8 /* TermsAndConditionsViewController.swift */,
+				BDCF73642893158500BFA1D8 /* GlobalVariables.swift */,
+				BDCF7360289311D200BFA1D8 /* Extensions.swift */,
 				BDCF734F2892FA2C00BFA1D8 /* Main.storyboard */,
 				BDCF73552892FA2F00BFA1D8 /* Assets.xcassets */,
+				BDCF736628931C4000BFA1D8 /* carlton-dancing.gif */,
 				BDCF73572892FA2F00BFA1D8 /* LaunchScreen.storyboard */,
 				BDCF735A2892FA2F00BFA1D8 /* Info.plist */,
 				BDCF73522892FA2D00BFA1D8 /* UserInyerface.xcdatamodeld */,
@@ -131,6 +152,7 @@
 				BDCF73592892FA2F00BFA1D8 /* LaunchScreen.storyboard in Resources */,
 				BDCF73562892FA2F00BFA1D8 /* Assets.xcassets in Resources */,
 				BDCF73512892FA2C00BFA1D8 /* Main.storyboard in Resources */,
+				BDCF736728931C4000BFA1D8 /* carlton-dancing.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +163,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCF7361289311D200BFA1D8 /* Extensions.swift in Sources */,
 				BDCF734E2892FA2C00BFA1D8 /* ViewController.swift in Sources */,
+				BDCF736928932B8800BFA1D8 /* SignUpViewController.swift in Sources */,
+				BDCF736D28935C8400BFA1D8 /* AlertViewController.swift in Sources */,
 				BDCF734A2892FA2C00BFA1D8 /* AppDelegate.swift in Sources */,
 				BDCF734C2892FA2C00BFA1D8 /* SceneDelegate.swift in Sources */,
+				BDCF736B28934AC300BFA1D8 /* TermsAndConditionsViewController.swift in Sources */,
+				BDCF73652893158500BFA1D8 /* GlobalVariables.swift in Sources */,
 				BDCF73542892FA2D00BFA1D8 /* UserInyerface.xcdatamodeld in Sources */,
+				BDCF73632893135B00BFA1D8 /* YouWinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
