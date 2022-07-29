@@ -1,3 +1,5 @@
-# kwk-userinyerface
+# KWK User Inyerface
 
-Hit Clone -> Open in XCode to try it out!
+## Usage
+[Download Xcode](https://developer.apple.com/xcode/)
+Hit `Clone -> Open in XCode` to try it out!
