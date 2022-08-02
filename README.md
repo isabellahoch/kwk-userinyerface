@@ -1,7 +1,7 @@
 
 # KWK User Inyerface
 
-As an Instructor Assistant at Kode with Klossy, I have often drawn upon Bagaar's [User Inyerface Worst-Practice UI/UX example](https://userinyerface.com/) to demonstrate what _not_ to do when it comes to user design. However, teaching the Mobile Application curriculum with Swift & Xcode, it felt like a departure from our regular coding environment to use a website instead of an iOS app. Thus, I decided to translate Bagaar's excellent idea into iOS, incorporating similar frustrations and a painful UI into this app. Not only does it show what *not* to do from a design perspective, but this app also demonstrates how to implement some *spicy* features many scholars might want to incorporate in their final projects! These are outlined in the **Features** section below :)
+As an Instructor Assistant at Kode with Klossy, I have often drawn upon Bagaar's [User Inyerface Worst-Practice UI/UX example](https://userinyerface.com/) to demonstrate what _not_ to do when it comes to user design. However, teaching the Mobile Application curriculum with Swift & Xcode, it felt like a departure from our regular coding environment to use a website instead of an iOS app. Thus, I decided to translate Bagaar's excellent yet painfully aggravating design into iOS, incorporating similar frustrations and a painful UI into this app. Not only does it show what *not* to do from a design perspective, but this app also demonstrates how to implement some *spicy* features many scholars might want to incorporate in their final projects! These are outlined in the **Features** section below :)
 
 ## Features
 ### ActivityViewController (aka a share menu!)
