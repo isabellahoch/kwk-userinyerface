@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
+    
+    var activeTextField : UITextField? = nil
     
     @IBOutlet weak var emailIsValid: UILabel!
     @IBOutlet weak var email: UITextField!
@@ -23,6 +25,70 @@ class SignUpViewController: UIViewController {
         emailIsValid.text = "Email is invalid. It must contain @ and ."
         toNext.isHidden = true
         buttonText.isHidden = toNext.isHidden
+        
+        // dismisses keyboard if you tap anywhere around it
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+        
+        // alternate way to dismiss keyboard
+        let center = NotificationCenter.default
+        
+        let mainQueue = OperationQueue.main
+        
+        center.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: mainQueue) { (notif) in
+            self.keyboardWillShow(notification: notif as NSNotification)
+        }
+        
+        center.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: mainQueue) { (notif) in
+            self.keyboardWillHide(notification: notif as NSNotification)
+        }
+        
+        // add delegate to all textfields to self (this view controller)
+            email.delegate = self
+            password.delegate = self
+    }
+    
+    // dismiss current keyboard on return key!
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+
+            // if keyboard size is not available for some reason, dont do anything
+            return
+          }
+
+          var shouldMoveViewUp = false
+
+          // if active text field is not nil
+          if let active = activeTextField {
+
+            let bottomOfTextField = active.convert(active.bounds, to: self.view).maxY;
+            
+            let topOfKeyboard = self.view.frame.height - keyboardSize.height
+
+            // if the bottom of Textfield is below the top of keyboard, move up
+            if bottomOfTextField > topOfKeyboard {
+              shouldMoveViewUp = true
+            }
+          }
+
+          if(shouldMoveViewUp || activeTextField == password) {
+            self.view.frame.origin.y = 0 - keyboardSize.height
+          }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+      // move back the root view origin to zero
+      self.view.frame.origin.y = 0
+    }
+    
+    @IBAction func emailEditingDidBegin(_ sender: Any) {
+        activeTextField = email
+    }
+    
+    @IBAction func passwordEditingDidBegin(_ sender: Any) {
+        activeTextField = password
     }
     
     @IBAction func emailValChanged(_ sender: Any) {
@@ -31,6 +97,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func emailEditingEnded(_ sender: Any) {
         validateEmail()
+        activeTextField = nil
     }
     
     @IBAction func emailEditingChanged(_ sender: Any) {
@@ -43,6 +110,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func passwordEditingEnded(_ sender: Any) {
         validatePassword()
+        activeTextField = nil
     }
     
     @IBAction func passwordEditingChanged(_ sender: Any) {

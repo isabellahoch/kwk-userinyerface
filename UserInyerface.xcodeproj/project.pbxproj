@@ -21,6 +21,8 @@
 		BDCF736928932B8800BFA1D8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736828932B8800BFA1D8 /* SignUpViewController.swift */; };
 		BDCF736B28934AC300BFA1D8 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736A28934AC300BFA1D8 /* TermsAndConditionsViewController.swift */; };
 		BDCF736D28935C8400BFA1D8 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736C28935C8400BFA1D8 /* AlertViewController.swift */; };
+		BDCF736F28940F6100BFA1D8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF736E28940F6000BFA1D8 /* LogInViewController.swift */; };
+		BDCF7371289412ED00BFA1D8 /* PreviousAttemptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF7370289412ED00BFA1D8 /* PreviousAttemptsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		BDCF736828932B8800BFA1D8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BDCF736A28934AC300BFA1D8 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		BDCF736C28935C8400BFA1D8 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		BDCF736E28940F6000BFA1D8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		BDCF7370289412ED00BFA1D8 /* PreviousAttemptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousAttemptsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,9 @@
 				BDCF734D2892FA2C00BFA1D8 /* ViewController.swift */,
 				BDCF73622893135A00BFA1D8 /* YouWinViewController.swift */,
 				BDCF736C28935C8400BFA1D8 /* AlertViewController.swift */,
+				BDCF736E28940F6000BFA1D8 /* LogInViewController.swift */,
 				BDCF736828932B8800BFA1D8 /* SignUpViewController.swift */,
+				BDCF7370289412ED00BFA1D8 /* PreviousAttemptsTableViewController.swift */,
 				BDCF736A28934AC300BFA1D8 /* TermsAndConditionsViewController.swift */,
 				BDCF73642893158500BFA1D8 /* GlobalVariables.swift */,
 				BDCF7360289311D200BFA1D8 /* Extensions.swift */,
@@ -165,6 +171,7 @@
 			files = (
 				BDCF7361289311D200BFA1D8 /* Extensions.swift in Sources */,
 				BDCF734E2892FA2C00BFA1D8 /* ViewController.swift in Sources */,
+				BDCF736F28940F6100BFA1D8 /* LogInViewController.swift in Sources */,
 				BDCF736928932B8800BFA1D8 /* SignUpViewController.swift in Sources */,
 				BDCF736D28935C8400BFA1D8 /* AlertViewController.swift in Sources */,
 				BDCF734A2892FA2C00BFA1D8 /* AppDelegate.swift in Sources */,
@@ -172,6 +179,7 @@
 				BDCF736B28934AC300BFA1D8 /* TermsAndConditionsViewController.swift in Sources */,
 				BDCF73652893158500BFA1D8 /* GlobalVariables.swift in Sources */,
 				BDCF73542892FA2D00BFA1D8 /* UserInyerface.xcdatamodeld in Sources */,
+				BDCF7371289412ED00BFA1D8 /* PreviousAttemptsTableViewController.swift in Sources */,
 				BDCF73632893135B00BFA1D8 /* YouWinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77MNVBUTBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UserInyerface/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -346,6 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77MNVBUTBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UserInyerface/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

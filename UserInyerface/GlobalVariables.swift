@@ -7,16 +7,15 @@
 
 import Foundation
 
+// by putting these variables/functions inside a struct (which you can think of as a "static" Class, you can access them in all your other code files!
+
 struct Timer {
+    
     static var dateStarted = Date()
     static var calendar = Calendar.current
     
     static func start() {
         dateStarted = Date()
-        print("Starting Timer")
-        print(dateStarted)
-        
-        print(currentTime())
     }
     
     static func hours() -> Int {
@@ -34,7 +33,6 @@ struct Timer {
     static func currentTime() -> String {
         calendar = Calendar.current
         let timeDelta = Date() - dateStarted
-        print("\((Date() - dateStarted)) seconds")
         
         let delta = Double(String(timeDelta))
         var hours = 0
@@ -51,6 +49,7 @@ struct Timer {
 
         
         return("\(Double(round(10000 * delta!) / 10000)) seconds")
+        
         // to format like 00:00:00 if needed :)
         //        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
         

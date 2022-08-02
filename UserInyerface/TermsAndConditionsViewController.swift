@@ -10,6 +10,7 @@ import WebKit
 
 class TermsAndConditionsViewController: UIViewController, WKNavigationDelegate {
     
+    // create outlet for web view
     @IBOutlet weak var webView: WKWebView!
     
     override func loadView() {
@@ -21,7 +22,7 @@ class TermsAndConditionsViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // set URL for web view
         
         let url = URL(string: "https://www.kodewithklossy.com/tos")!
         webView.load(URLRequest(url: url))

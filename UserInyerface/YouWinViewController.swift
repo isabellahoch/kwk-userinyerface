@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 class YouWinViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class YouWinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // demo adding in gif
+        
         let myGif = UIImage.gifImageWithName("carlton-dancing")
        let imageView = UIImageView(image: myGif)
        imageView.frame = CGRect(x: 20.0, y: 390.0, width: self.view.frame.size.width - 40, height: 250.0)
@@ -24,11 +27,10 @@ class YouWinViewController: UIViewController {
         
         record = Timer.currentTime()
         
+        // time delta example (commented out in this case!)
 //        let delta = Timer.dateStarted - Date()
 //
 //        let differenceInSeconds = Int(Date().timeIntervalSince(Timer.dateStarted))
-//
-//        print("delta: \(delta)")
 //
 //        var time = "\(delta) seconds"
 //
@@ -38,28 +40,65 @@ class YouWinViewController: UIViewController {
 //
         result.text = "YAY! You completed the challenge in\n\(record)!!!"
         
+        saveToCoreData()
+        
         // Do any additional setup after loading the view.
     }
     
+    func saveToCoreData() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            // we are creating a new Attempt object here, naming it attempt
+            let attempt = Attempt(entity: Attempt.entity(), insertInto: context)
+            
+            attempt.dateStarted = Timer.dateStarted
+            attempt.record = record
+            attempt.seconds = Double(Timer.seconds())
+            
+            try? context.save()
+            
+        }
+    }
+    
+    // SHARE MENU EXAMPLE!
+    
     @IBAction func shareButtonTapped(_ sender: Any) {
-        share(sender:sender)
+        // Setting description
+        let firstActivityItem = "I finished the Kode with Klossy User Inyerface Challenge 👩‍💻 in \(record)!! Try it for yourself 😈"
+
+        // Setting url
+        let link =  "http://github.com/isabellahoch/kwk-userinyerface"
+        
+        // Setting image (file name should be the same as in the assets folder!)
+        let imageFileName = "kwkUI"
+        
+        share(sender:sender, text: firstActivityItem, urlString: link, imageFileName: imageFileName)
     }
     
     @IBAction func otherShareButtonTapped(_ sender: Any) {
-        share(sender:sender)
+        
+        // Setting description
+        let firstActivityItem = "I finished the Kode with Klossy User Inyerface Challenge 👩‍💻 in \(record)!! Try it for yourself 😈"
+
+        // Setting url
+        let link =  "http://github.com/isabellahoch/kwk-userinyerface"
+        
+        // Setting image (file name should be the same as in the assets folder!)
+        let imageFileName = "kwkUI"
+        
+        share(sender:sender, text: firstActivityItem, urlString: link, imageFileName: imageFileName)
     }
     
-    func share(sender: Any) {
+    // copy the below function and use it to
+    func share(sender: Any, text : String, urlString : String, imageFileName : String) {
+        
+        let url : NSURL = NSURL(string: urlString)!
+        let image : UIImage = UIImage(named: "kwkUI")!
+        
         // Setting description
-         let firstActivityItem = "I finished the Kode with Klossy User Inyerface Challenge 👩‍💻 in \(record)!! Try it for yourself 😈"
-
-         // Setting url
-         let secondActivityItem : NSURL = NSURL(string: "http://github.com/isabellahoch/kwk-userinyerface")!
          
-         // If you want to use an image
-         let image : UIImage = UIImage(named: "kwkUI")!
          let activityViewController : UIActivityViewController = UIActivityViewController(
-             activityItems: [firstActivityItem, secondActivityItem, image], applicationActivities: nil)
+             activityItems: [text, url, image], applicationActivities: nil)
          
          // This lines is for the popover you need to show in iPad
          activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
@@ -93,14 +132,12 @@ class YouWinViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
     */
     
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let previousAttempts = segue.destination as? PreviousAttemptsTableViewController {
+            previousAttempts.getAttempts()
+            previousAttempts.tableView.reloadData()
+        }
+    }
 }
